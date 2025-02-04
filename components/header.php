@@ -41,27 +41,26 @@ define('ROOT_DIR', '/php_examples/');
               </a>
             </li>
             <li class='max-lg:border-b max-lg:py-3 px-3'>
-              <a href='javascript:void(0)'
+              <a href= '<?= ROOT_DIR ?> pages/index.php'
                 class='hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>Home</a>
             </li>
-            <li class='max-lg:border-b max-lg:py-3 px-3'><a href = '<?= ROOT_DIR ?>pages/blog_list.php'
+            <li class='max-lg:border-b max-lg:py-3 px-3'><a href = 'blog'
               class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Blogs</a>
             </li>
-            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='<?= ROOT_DIR ?>pages/user_dashboard.php'
+            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='dashboard'
               class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Dashboard</a>
             </li>
-            <li class='max-lg:border-b max-lg:py-3 px-3'><a href= '<?= ROOT_DIR ?>pages/contact.php'
+            <li class='max-lg:border-b max-lg:py-3 px-3'><a href= 'contact'
               class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Contact</a>
             </li>
           </ul>
         </div>
 
         <div class='flex items-center ml-auto space-x-6'>
-          <button class='font-semibold text-[15px] border-none outline-none'><a href= '<?= ROOT_DIR ?>pages/login.php'
+          <button class='font-semibold text-[15px] border-none outline-none'><a href= 'login'
             class='text-[#007bff] hover:underline'>Login</a></button>
-          <button
-            class='px-4 py-2 text-sm rounded-sm font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Sign
-            up</button>
+          <button class='px-4 py-2 text-sm rounded-sm font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'><a href= 'register' 
+          >Sign up</a></button>
 
           <button id="toggleOpen" class='lg:hidden'>
             <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,6 @@
 <?php
-include '../database/config.php';
-include '../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 
 <div class="font-[sans-serif]">
@@ -90,5 +90,5 @@ include '../components/header.php';
     </div>
 
 <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>

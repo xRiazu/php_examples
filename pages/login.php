@@ -1,6 +1,6 @@
 <?php
-include '../database/config.php';
-include '../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 
 <div class="font-[sans-serif] bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600 text-gray-800">
@@ -87,5 +87,5 @@ include '../components/header.php';
     </div>
 
 <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>

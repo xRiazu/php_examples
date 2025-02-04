@@ -1,23 +1,23 @@
 <?php
-include 'database/config.php';
-include 'components/header.php';
-?>
+// Get the requested URL from the 'url' query parameter
+$url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
-<div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 p-8"p-8>
-      <img src="https://static.vecteezy.com/system/resources/previews/005/004/846/large_2x/abstract-sound-wave-curve-background-illustration-with-gold-and-blue-particles-creative-colorful-equalizer-and-spectrum-music-for-banner-and-poster-vector.jpg" alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
+// Define available routes (URL => corresponding PHP file)
+$routes = [
+    '' => 'pages/index.php',          // Home route
+    'contact' => 'pages/contact.php',          // contact route
+    'register' => 'pages/register.php',    // register page route 
+    'login' => 'pages/login.php', // login page route
+    'blog' => 'pages/blog_list.php', // blog page route
+    'admin' => 'pages/admin/dashboard.php', // admin page route
+    'dashboard' => 'pages/user/user_dashboard.php', // user page route
+];
 
-      <div class="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-        <h2 class="sm:text-4xl text-2xl font-bold mb-6">Explore The World Of Music</h2>
-        <p class="sm:text-lg text-base text-center text-gray-200">Discover Music!</p>
-
-        <button
-          type="button"
-          class="mt-10 bg-transparent text-white text-base py-3 px-6 border border-white rounded-lg hover:bg-white hover:text-black transition duration-300">
-          Start Now!
-        </button>
-      </div>
-    </div>
-
-<?php
-include 'components/footer.php';
+// Check if the URL matches a route
+if (array_key_exists($url, $routes)) {
+    require $routes[$url];  // Load the appropriate file for the route
+} else {
+    // If no route matches, show a 404 page
+    require 'pages/error_404.php';
+}
 ?>
