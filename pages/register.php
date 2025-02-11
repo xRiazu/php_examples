@@ -9,7 +9,7 @@ include 'components/header.php';
       </div>
 
       <div class="mx-4 mb-4 -mt-20">
-        <form class="max-w-4xl mx-auto bg-white shadow-[0_2px_13px_-6px_rgba(0,0,0,0.4)] sm:p-8 p-4 rounded-md">
+        <form class="max-w-4xl mx-auto bg-white shadow-[0_2px_13px_-6px_rgba(0,0,0,0.4)] sm:p-8 p-4 rounded-md" action="registerController" method="post">
           <div class="grid sm:grid-cols-2 gap-6">
             <button type="button"
               class="w-full px-4 py-2.5 flex items-center justify-center rounded-md text-gray-800 text-sm tracking-wider border-none outline-none bg-gray-100 hover:bg-red-400">
@@ -54,34 +54,41 @@ include 'components/header.php';
             </p>
           </div>
 
+          <!-- status message -->
+          <?php if (isset($_SESSION['status_message'])) : ?>
+            <div class="status-message"><?= $_SESSION['status_message'] ?></div>
+          <?php unset($_SESSION['status_message']) ?>
+              <?php endif?>
+
           <div class="grid sm:grid-cols-2 gap-6">
             <div>
               <label class="text-gray-500 text-sm mb-2 block">First Name</label>
-              <input name="name" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter name" />
+              <input name="firstname" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter Your First Name" />
             </div>
             <div>
               <label class="text-gray-500 text-sm mb-2 block">Last Name</label>
-              <input name="lname" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter last name" />
+              <input name="lastname" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter Your Last Name" />
             </div>
             <div>
-              <label class="text-gray-500 text-sm mb-2 block">Email Id</label>
-              <input name="email" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter email" />
+              <label class="text-gray-500 text-sm mb-2 block">Email</label>
+              <input name="email" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter Your Email" />
             </div>
             <div>
-              <label class="text-gray-500 text-sm mb-2 block">Mobile No.</label>
-              <input name="number" type="number" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter mobile number" />
+              <label class="text-gray-500 text-sm mb-2 block">Username</label>
+              <input name="username" type="text" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter Your Username" />
             </div>
             <div>
               <label class="text-gray-500 text-sm mb-2 block">Password</label>
-              <input name="password" type="password" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter password" />
+              <input name="password" type="password" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter Your Password" />
             </div>
             <div>
               <label class="text-gray-500 text-sm mb-2 block">Confirm Password</label>
-              <input name="cpassword" type="password" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Enter confirm password" />
+              <input name="cpassword" type="password" class="bg-gray-100 focus:bg-transparent w-full text-sm text-gray-800 px-4 py-2.5 rounded border focus:border-blue-600 outline-none transition-all" placeholder="Please Confirm Password" />
             </div>
+            
           </div>
           <div class="mt-8">
-            <button type="button" class="py-2.5 px-4 text-sm tracking-wider rounded text-black bg-blue-600 hover:bg-blue-300 focus:outline-none">
+            <button type="Submit" class="py-2.5 px-4 text-sm tracking-wider rounded text-black bg-blue-600 hover:bg-blue-300 focus:outline-none">
               Sign up
             </button>
           </div>

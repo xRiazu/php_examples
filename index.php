@@ -11,6 +11,8 @@ $routes = [
     'blog' => 'pages/blog_list.php', // blog page route
     'admin' => 'pages/admin/dashboard.php', // admin page route
     'dashboard' => 'pages/user/user_dashboard.php', // user page route
+
+    'registerController' => 'controller/registerController.php',
 ];
 
 // Check if the URL matches a route
