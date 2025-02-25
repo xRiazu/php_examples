@@ -39,6 +39,20 @@ CREATE TABLE `blogs` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blogs` (`bID`, `title`, `context`, `uID`, `bStatus`, `image_url`, 'audio_url', `spotify_embed`, `created_at`) VALUES
+(14, 'The Rise of Indie Pop', 'Exploring the journey of indie pop music and its influence on mainstream culture.', 2, 'published', 'indie.jpg', 'audio1.mp3', 'https://open.spotify.com/embed/track/1', '2025-02-17 22:23:46'),
+(15, 'Hip-Hop Evolution', 'Hip-hop is more than just a genre of music—it’s a cultural movement that has influenced fashion, language, politics, and global music trends. Since its inception in the 1970s, hip-hop has evolved from a grassroots artistic expression in the Bronx to a worldwide phenomenon shaping generations. This deep dive will explore the origins of hip-hop, its transformation over the decades, and the impact it continues to have on music and society.', 2, 'published', 'hip-hop.jpg', 'audio2.mp3', 'https://open.spotify.com/embed/track/2', '2025-02-17 22:23:46'),
+(16, 'Jazz in the Modern Era', 'How jazz continues to shape contemporary music across genres.', 2, 'published', 'jazz.jpg', 'audio3.mp3', 'https://open.spotify.com/embed/track/3', '2025-02-17 22:23:46'),
+(17, 'The Best Rock Albums of 2024', 'Ranking the top rock albums released this year.', 2, 'published', 'rock.jpg', 'audio4.mp3', 'https://open.spotify.com/embed/track/4', '2025-02-17 22:23:46'),
+(18, 'Electronic Music Trends', 'A look at the latest trends in electronic music and festival culture.', 2, 'published', 'electronic.jpg', 'audio5.mp3', 'https://open.spotify.com/embed/track/5',  '2025-02-17 22:23:46'),
+(19, 'The Revival of Vinyl Records', 'Why vinyl records are making a huge comeback among music lovers.', 2, 'published', 'vinyl.jpg', 'audio6.mp3', 'https://open.spotify.com/embed/track/6', '2025-02-17 22:23:46'),
+(20, 'Classical Music in Film', 'How classical compositions continue to elevate cinematic storytelling.', 2, 'published', 'classical.jpg', 'audio7.mp3', 'https://open.spotify.com/embed/track/7', '2025-02-17 22:23:46'),
+(21, 'Music Production Tips', 'Essential tips for aspiring music producers looking to make an impact.', 2, 'published', 'music_production.jpg', 'audio8.mp3', 'https://open.spotify.com/embed/track/8', '2025-02-17 22:23:46');
+
 -- --------------------------------------------------------
 
 --
@@ -84,6 +98,9 @@ CREATE TABLE `users` (
   `pfp` varchar(64) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `user` ('uID', 'firstname', 'lastname', 'username', 'email', 'password', 'role', 'pfp', 'created_at') VALUES
+(2, 'Uzair', 'Mohammed', 'xRiazu', 'uzairmohammed@email.com', 'seventeencaratno1', 'user', '2025-02-11 00:09:02');
 
 --
 -- Indexes for dumped tables

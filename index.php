@@ -9,10 +9,14 @@ $routes = [
     'register' => 'pages/register.php',    // register page route 
     'login' => 'pages/login.php', // login page route
     'blog' => 'pages/blog_list.php', // blog page route
+    'blogInfo' => 'pages/blog_details.php', // blog page route
     'admin' => 'pages/admin/dashboard.php', // admin page route
     'dashboard' => 'pages/user/user_dashboard.php', // user page route
 
     'registerController' => 'controller/registerController.php',
+    'loginController' => 'controller/loginController.php',
+    'logOut' => 'controller/logOutController.php',
+    'commentController' => 'commentController.php',
 ];
 
 // Check if the URL matches a route
